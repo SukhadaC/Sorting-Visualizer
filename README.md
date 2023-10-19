@@ -1,0 +1,2 @@
+# Sorting-Visualizer
+Sort Sync : Dive into the world of sorting algorithms with our interactive web application. This project leverages HTML, CSS, and JavaScript to visually demonstrate the inner workings of sorting algorithms like Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort. Watch as arrays come to life with bars representing elements, making complex algorithms easily understandable. Experience the magic of order and efficiency in real-time, and gain insight into the beauty of algorithms through visualization."
