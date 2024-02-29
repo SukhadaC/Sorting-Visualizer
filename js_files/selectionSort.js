@@ -27,9 +27,12 @@ PseudoCode:
                 repeat (size - 1) times
                 set the first unsorted element as the minimum
                     for each of the unsorted elements
-                        if element < currentMinimum
+
+                        if element < currentMinimum:
                         set element as new minimum
                          swap minimum with first unsorted position
+                         endif
+                         
               end selectionSort
 </p>
              
@@ -79,6 +82,8 @@ PseudoCode:
 
         // Highlight the bar in green after placing it in the correct position
         bars[i].style.backgroundColor = 'green';
+        if(i==minIndex)
+        continue;
         bars[minIndex].style.backgroundColor = '';
 
         // Delay for visualization
