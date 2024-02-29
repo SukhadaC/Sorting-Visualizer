@@ -89,9 +89,7 @@ color:black;
     
   
 }
-.psudeocode{
-    
-}   
+  
 .pseudocode-heading{
     max-width: 300px;
     align-content: center;
@@ -101,9 +99,7 @@ color:black;
     font-weight: 600;
 }
 
-.pseudo-text-content{
-    
-}
+
 .code-editor{    
     background: #3d3c3c;
     position: relative;
