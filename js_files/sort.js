@@ -27,7 +27,7 @@ function createBars() {
         
         // Generate a random integer between 0 and 100 for the bar's height
         const barHeight = getRandomInt(0, 50);
-        newBar.style.height = `${barHeight+50}px`; // Scale the height as a percentage
+        newBar.style.height = `${barHeight+150}px`; // Scale the height as a percentage
         // const barValue=document.createElement('p');
         // barValue.textContent=barHeight;
         // newBar.appendChild(barValue);
