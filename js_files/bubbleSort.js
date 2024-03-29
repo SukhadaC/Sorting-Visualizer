@@ -68,9 +68,9 @@ PseudoCode:
                 // Swap elements
                 const temp = bars[j].style.height;
                 bars[j].style.height = bars[j + 1].style.height;
-                bars[j].textContent=height2-50;
+                bars[j].textContent=height2-150;
                 bars[j + 1].style.height = temp;
-                bars[j+1].textContent=height1-50;
+                bars[j+1].textContent=height1-150;
             }
 
             // Remove red highlight and set green for bars in their correct position
@@ -84,7 +84,10 @@ PseudoCode:
             // Remove green highlight
             bars[j].style.backgroundColor = '';
             bars[j + 1].style.backgroundColor = '';
+            
+            
         }
+        bars[bars.length - i - 1].style.backgroundColor = 'green';
     }
     //to depict that array is Sorted
     for (let i = 0; i < bars.length; i++) {

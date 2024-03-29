@@ -1,8 +1,16 @@
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 async function selectionSortVisualize() {
     const barsContainer = document.getElementById('bars-container');
     const bars = barsContainer.getElementsByClassName('bar');
-    const delay = 500; // Adjust the delay as needed
-
+    const delayInput=document.getElementById('mydelay');
+    delayInput.oninput = async function() {
+        delay=this.value;
+        delay=100-delay;
+         console.log(delay);
+       }
     const define=document.getElementById('defination');
 
     define.innerHTML=`
@@ -52,12 +60,12 @@ PseudoCode:
         bars[minIndex].style.backgroundColor = 'red';
 
         for (let j = i + 1; j < bars.length; j++) {
-            await new Promise(resolve => setTimeout(resolve, delay));
+           
             // Highlight bars being compared in red
             bars[j].style.backgroundColor = 'red';
            
             // Delay for visualization
-            await new Promise(resolve => setTimeout(resolve, delay));
+           await sleep(delay)
 
             let height1 = parseInt(bars[j].style.height);
             let height2 = parseInt(bars[minIndex].style.height);
@@ -76,9 +84,9 @@ PseudoCode:
         // Swap elements
         const temp = bars[i].style.height;
         bars[i].style.height = bars[minIndex].style.height;
-        bars[i].textContent=height2-50;
+        bars[i].textContent=height2-150;
         bars[minIndex].style.height = temp;
-        bars[minIndex].textContent=height1-50;
+        bars[minIndex].textContent=height1-150;
 
         // Highlight the bar in green after placing it in the correct position
         bars[i].style.backgroundColor = 'green';
@@ -87,7 +95,7 @@ PseudoCode:
         bars[minIndex].style.backgroundColor = '';
 
         // Delay for visualization
-        await new Promise(resolve => setTimeout(resolve, delay));
+      await sleep(delay)
     }
 
     // Highlight the last bar in green

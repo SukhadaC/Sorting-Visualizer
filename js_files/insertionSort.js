@@ -70,9 +70,9 @@ PseudoCode:
             bars[j-1].style.backgroundColor='red';
             await new Promise(resolve => setTimeout(resolve, delay));
              bars[j].style.height=bars[j-1].style.height;
-             bars[j].textContent=height2-50;
+             bars[j].textContent=height2-150;
              bars[j-1].style.height=temp;
-             bars[j-1].textContent=height1-50;
+             bars[j-1].textContent=height1-150;
 
              bars[j].style.backgroundColor='yellow';
              bars[j-1].style.backgroundColor='green';
